@@ -1,8 +1,11 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+<footer>
+    <p class="copyright">
+        &copy; <?php
+            echo "2013 Theme by";
+        ?>
+        <a href="http://www.graphberry.com">GraphBerry</a>,
+        <a href="http://goo.gl/NM84K2">Documentation</a></p>
+    </p>
+</footer>
+</body>
+</html>
