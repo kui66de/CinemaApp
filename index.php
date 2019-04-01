@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <?php include 'views/header.php'; ?>
+<?php include 'views/header.php'; ?>
     <body>
         <div class="navbar">
             <div class="navbar-inner">
@@ -911,18 +909,5 @@
                 </div>
             </div>
         </div>
-        <!-- Contact section edn -->
-        <!-- Footer section start -->
-        <div class="footer">
-            <?php include 'views/footer.php'; ?>
-        </div>
-        <!-- Footer section end -->
-        <!-- ScrollUp button start -->
-        <div class="scrollup">
-            <a href="#">
-                <i class="icon-up-open"></i>
-            </a>
-        </div>
-        <?php include 'views/javaScript.php'?>
-    </body>
-</html>
+    <?php include 'views/footer.php'; ?>
+
