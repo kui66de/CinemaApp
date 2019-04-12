@@ -7,4 +7,4 @@
     <p>Error message: <?php echo $error_message; ?></p>
     <p>&nbsp;</p>
 </main>
-<?php include '../view/footer.php'; ?>
+<?php include '../views/footer.php'; ?>
