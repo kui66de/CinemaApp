@@ -5,7 +5,7 @@ function get_movies() {
               ORDER BY id';
     $statement = $db->prepare($query);
     $statement->execute();
-    $movies = $statement->fetchAll();
+    $movies = $statement->fetchAll(PDO::FETCH_ASSOC);
     $statement->closeCursor();
     return $movies;
 }
@@ -18,7 +18,7 @@ function get_movies_by_genre($genre) {
     $statement = $db->prepare($query);
     $statement->bindValue(":genre", $genre);
     $statement->execute();
-    $movies = $statement->fetchAll();
+    $movies = $statement->fetchAll(PDO::FETCH_ASSOC);
     $statement->closeCursor();
     return $movies;
 }
@@ -29,14 +29,14 @@ function get_movie($id) {
     $statement = $db->prepare($query);
     $statement->bindValue(":id", $id);
     $statement->execute();
-    $movie = $statement->fetch();
+    $movie = $statement->fetch(PDO::FETCH_ASSOC);
     $statement->closeCursor();
     return $movie;
 }
 
 /**
- * @param $game_id
  * use soft delete
+ * @param $id
  */
 function delete_movie($id) {
     global $db;
@@ -65,4 +65,5 @@ function add_movie($id, $genre, $title, $director,$year, $price) {
     $statement->execute();
     $statement->closeCursor();
 }
-php?>
+
+?>
