@@ -131,8 +131,8 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
--- create table for record user who buy moive
-create table user_model_rlt(
+-- create table for record user who buy movie
+create table user_movie_rlt(
   `ID`int(11) NOT NULL AUTO_INCREMENT,
   `userID` int(11) NOT NULL default 0,
   `movieID` int(11) NOT NULL default 0,
