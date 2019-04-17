@@ -49,21 +49,50 @@ function delete_movie($id) {
     $statement->closeCursor();
 }
 
-function add_movie($id, $genre, $title, $director,$year, $price) {
+function add_movie($genre, $title, $director, $year, $price, $runtime) {
     global $db;
     $query = 'INSERT INTO movies
-                 (id, genre, title, director, year, price)
+                 (genre, title, director, year, price, runtime)
               VALUES
-                 (:id, :genre, :title, :director, :year, :price)';
+                 (:genre, :title, :director, :year, :price, :runtime)';
     $statement = $db->prepare($query);
-    $statement->bindValue(':id', $id);
     $statement->bindValue(':genre', $genre);
     $statement->bindValue(':title', $title);
     $statement->bindValue(':director', $director);
     $statement->bindValue(':year', $year);
     $statement->bindValue(':price', $price);
+    $statement->bindValue(':runtime', $runtime);
     $statement->execute();
     $statement->closeCursor();
 }
 
-?>
+function update_movie($id, $genre, $title, $director,$year, $price) {
+    global $db;
+    $query = "UPDATE movies 
+              set genre = :genre, title = :title, director = :director, year = :year, price = :price 
+              WHERE id = :id";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':genre', $genre);
+    $statement->bindValue(':title', $title);
+    $statement->bindValue(':director', $director);
+    $statement->bindValue(':year', $year);
+    $statement->bindValue(':price', $price);
+    $statement->bindValue(':id', $id);
+    $statement->execute();
+    $statement->closeCursor();
+}
+
+function purchase_movie($user_id, $movie_id)
+{
+    global $db;
+    $query = 'INSERT INTO user_movie_rlt
+                 (userID, movieID, buy_time)
+              VALUES
+                 (:user_id, :movie_id, :buy_time)';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':user_id', $user_id);
+    $statement->bindValue(':movie_id', $movie_id);
+    $statement->bindValue(':buy_time', date('Y-m-d H:i:s', time()));
+    $statement->execute();
+    $statement->closeCursor();
+}
