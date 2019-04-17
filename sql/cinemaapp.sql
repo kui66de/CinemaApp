@@ -48,7 +48,7 @@ CREATE TABLE `movies` (
   `runtime` varchar(255) DEFAULT NULL,
   `year` varchar(32) DEFAULT NULL,
   `price` varchar(255) NOT NULL,
-  `is_delete` tinyint(4) NOT null DEFAULT 0 comment '0:not deleted;1: is deleted'
+  `is_deleted` tinyint(4) NOT null DEFAULT 0 comment '0:not deleted;1: is deleted'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
