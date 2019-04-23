@@ -57,6 +57,7 @@ CREATE TABLE `movies` (
   `runtime` varchar(255) DEFAULT NULL,
   `year` varchar(32) DEFAULT NULL,
   `price` varchar(255) NOT NULL,
+  `admin_id` int(11) NOT NULL DEFAULT 0,
   `is_deleted` tinyint(4) NOT null DEFAULT 0 comment '0:not deleted;1: is deleted'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -64,17 +65,17 @@ CREATE TABLE `movies` (
 -- 转存表中的数据 `movies`
 --
 
-INSERT INTO `movies` (`id`, `title`, `genre`, `director`, `runtime`, `year`, `price`) VALUES
-(1, 'iron man', 'Marvel, Action, Adventure, Sci-Fi', 'Jon Favreau', '126 min', '2008', '$12.00'),
-(2, 'iron man 2', 'Disney, marvel,Action, Adventure, Sci-Fi', 'Jon Favreau', '124 min', '2010', '$16.99'),
-(3, 'x men first class', 'Action, Adventure, Sci-Fi', 'Matthew Vaughn', '132 min', '2011', '$8.88'),
-(4, 'the wolverine', 'Action, Adventure, Sci-Fi', 'James Mangold', '126 min', '2013', '$10.00'),
-(5, 'begin again', 'Drama, Music', 'John Carney', '104 min', '2013', '$9.99'),
-(6, 'tammy', 'Comedy', 'Ben Falcone', '97 min', '2014', '$6.99'),
-(7, 'kick-ass', 'Action, Comedy', 'Matthew Vaughn', '117 min', '2010', '$5.68'),
-(8, 'transformers revenge of the fallen', 'Action, Adventure, Sci-Fi', 'Michael Bay', '150 min', '2009', '$11.11'),
-(9, 'kick-ass 2', 'Action, Comedy, Crime', 'Jeff Wadlow', '103 min', '2013', '$23.58'),
-(10, 'elektra', 'Action, Crime, Fantasy', 'Rob Bowman', '97 min', '2005', '$14.13');
+INSERT INTO `movies` (`id`, `title`, `genre`, `director`, `runtime`, `year`, `price`, `admin_id`) VALUES
+(1, 'iron man', 'Marvel, Action, Adventure, Sci-Fi', 'Jon Favreau', '126 min', '2008', '$12.00', 1),
+(2, 'iron man 2', 'Disney, marvel,Action, Adventure, Sci-Fi', 'Jon Favreau', '124 min', '2010', '$16.99', 1),
+(3, 'x men first class', 'Action, Adventure, Sci-Fi', 'Matthew Vaughn', '132 min', '2011', '$8.88', 1),
+(4, 'the wolverine', 'Action, Adventure, Sci-Fi', 'James Mangold', '126 min', '2013', '$10.00', 1),
+(5, 'begin again', 'Drama, Music', 'John Carney', '104 min', '2013', '$9.99', 1),
+(6, 'tammy', 'Comedy', 'Ben Falcone', '97 min', '2014', '$6.99', 1),
+(7, 'kick-ass', 'Action, Comedy', 'Matthew Vaughn', '117 min', '2010', '$5.68', 1),
+(8, 'transformers revenge of the fallen', 'Action, Adventure, Sci-Fi', 'Michael Bay', '150 min', '2009', '$11.11', 1),
+(9, 'kick-ass 2', 'Action, Comedy, Crime', 'Jeff Wadlow', '103 min', '2013', '$23.58', 1),
+(10, 'elektra', 'Action, Crime, Fantasy', 'Rob Bowman', '97 min', '2005', '$14.13', 1);
 
 -- --------------------------------------------------------
 
@@ -85,6 +86,7 @@ INSERT INTO `movies` (`id`, `title`, `genre`, `director`, `runtime`, `year`, `pr
 CREATE TABLE `users` (
   `userID` int(11) NOT NULL,
   `userName` varchar(255) NOT NULL,
+  `nickName` varchar(255) NOT NULL DEFAULT '',
   `userPassword` varchar(125) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
