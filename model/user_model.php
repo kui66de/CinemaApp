@@ -10,15 +10,16 @@ function get_user_by_name($userName) {
     return $user;
 }
 
-function add_user($userName, $password) {
+function add_user($userName, $password, $nick_name) {
     global $db;
     $query = 'INSERT INTO users
-                 (userName, userPassword)
+                 (userName, userPassword, nickName)
               VALUES
-                 (:userName, :userPassword)';
+                 (:userName, :userPassword, :nickName)';
     $statement = $db->prepare($query);
     $statement->bindValue(':userName', $userName);
     $statement->bindValue(':userPassword', $password);
+    $statement->bindValue(':nickName', $nick_name);
     $statement->execute();
     $statement->closeCursor();
 }
