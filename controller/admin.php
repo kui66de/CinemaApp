@@ -3,6 +3,9 @@ function admin_login()
 {
     $admin_name = $_POST['adminname'];
     $password = $_POST['password'];
+    if (empty($admin_name) || empty($password) || !preg_match('/^[a-z\d_]{5,20}$/i', $admin_name)) {
+        return error_json('Please enter the correct account password');
+    }
     $admin = get_admin_by_name($admin_name);
     if (empty($admin)) {
         return error_json('account error');
