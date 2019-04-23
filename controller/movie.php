@@ -22,6 +22,11 @@ function add_new_movie()
     if (empty($admin_name) || empty($_SESSION[$admin_name])) {
         return error_json('please login with admin account');
     }
+    // Query data according to account number
+    $admin = get_admin_by_name($admin_name);
+    if (empty($admin)) {
+        return error_json('data does not exist');
+    }
     $title = $_POST['title'];
     $genre = $_POST['genre'];
     $director = $_POST['director'];
@@ -32,7 +37,7 @@ function add_new_movie()
     if (empty($title) || empty($genre) || empty($director) || empty($runtime) || empty($year) || empty($price)) {
         return error_json('please fill in the information correctly');
     }
-    add_movie($genre, $title, $director, $year, $price, $runtime);
+    add_movie($genre, $title, $director, $year, $price, $runtime, $admin['adminID']);
     return success_json('success');
 }
 
@@ -43,6 +48,11 @@ function modify_movie()
     session_start();
     if (empty($admin_name) || empty($_SESSION[$admin_name])) {
         return error_json('please login with admin account');
+    }
+    // Query data according to account number
+    $admin = get_admin_by_name($admin_name);
+    if (empty($admin)) {
+        return error_json('data does not exist');
     }
     $id = $_POST['id'];
     $title = $_POST['title'];
@@ -62,7 +72,7 @@ function modify_movie()
         return error_json('film does not exist');
     }
 
-    update_movie($id, $genre, $title, $director, $year, $price);
+    update_movie($id, $genre, $title, $director, $year, $price, $admin['adminID']);
     return success_json('success');
 }
 
@@ -78,7 +88,12 @@ function del_movie()
     if (empty($id)) {
         return error_json('please enter the correct parameter');
     }
-    delete_movie($id);
+    // Query data according to account number
+    $admin = get_admin_by_name($admin_name);
+    if (empty($admin)) {
+        return error_json('data does not exist');
+    }
+    delete_movie($id, $admin['adminID']);
     return success_json('delete successful');
 }
 

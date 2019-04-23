@@ -38,23 +38,24 @@ function get_movie($id) {
  * use soft delete
  * @param $id
  */
-function delete_movie($id) {
+function delete_movie($id, $admin_id) {
     global $db;
     $query = "UPDATE movies 
-              set is_deleted = 1 
+              set is_deleted = 1, admin_id = :adminID 
               WHERE id = :id";
     $statement = $db->prepare($query);
+    $statement->bindValue('adminID', $admin_id);
     $statement->bindValue(':id', $id);
     $statement->execute();
     $statement->closeCursor();
 }
 
-function add_movie($genre, $title, $director, $year, $price, $runtime) {
+function add_movie($genre, $title, $director, $year, $price, $runtime, $admin_id) {
     global $db;
     $query = 'INSERT INTO movies
-                 (genre, title, director, year, price, runtime)
+                 (genre, title, director, year, price, runtime, admin_id)
               VALUES
-                 (:genre, :title, :director, :year, :price, :runtime)';
+                 (:genre, :title, :director, :year, :price, :runtime, :adminID)';
     $statement = $db->prepare($query);
     $statement->bindValue(':genre', $genre);
     $statement->bindValue(':title', $title);
@@ -62,14 +63,15 @@ function add_movie($genre, $title, $director, $year, $price, $runtime) {
     $statement->bindValue(':year', $year);
     $statement->bindValue(':price', $price);
     $statement->bindValue(':runtime', $runtime);
+    $statement->bindValue(':adminID', $admin_id);
     $statement->execute();
     $statement->closeCursor();
 }
 
-function update_movie($id, $genre, $title, $director,$year, $price) {
+function update_movie($id, $genre, $title, $director,$year, $price, $admin_id) {
     global $db;
     $query = "UPDATE movies 
-              set genre = :genre, title = :title, director = :director, year = :year, price = :price 
+              set genre = :genre, title = :title, director = :director, year = :year, price = :price, admin_id = :adminID 
               WHERE id = :id";
     $statement = $db->prepare($query);
     $statement->bindValue(':genre', $genre);
@@ -78,6 +80,7 @@ function update_movie($id, $genre, $title, $director,$year, $price) {
     $statement->bindValue(':year', $year);
     $statement->bindValue(':price', $price);
     $statement->bindValue(':id', $id);
+    $statement->bindValue(':adminID', $admin_id);
     $statement->execute();
     $statement->closeCursor();
 }
