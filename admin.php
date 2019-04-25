@@ -42,7 +42,6 @@
     <div class="container newsletter">
 
         <div class="centered">
-
             <form class="inline-form">
                 <input type="email" name="email" id="nlmail" class="span8" placeholder="Enter your email" required/>
                 <input type="email" name="email" id="nlmail" class="span8" placeholder="Enter your email" required/>
@@ -64,5 +63,32 @@
     </a>
 </div>
 <?php include 'views/javaScript.php' ?>
+<script>
+    var host = 'http://localhost:63342/CinemaApp'
+
+    function login() {
+        var username = $('#username').val()
+        var password = $('#password').val()
+        $.ajax({
+            type: "post",
+            url: host + "/yang.php?action=admin_login",
+            data: {"adminname": username, "password": password},
+            cache: false,
+            async: false,
+            dataType: "json",
+            success: function (data) {
+                if (true === data.data) {
+                    alert("login success！");
+                } else {
+                    alert( data.info.message);
+                }
+                $('#loginModal').modal('hide')
+            },
+            error: function () {
+                alert("server error");
+            }
+        })
+    }
+</script>
 </body>
 </html>
