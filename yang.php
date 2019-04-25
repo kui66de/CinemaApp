@@ -2,7 +2,7 @@
 
 require('controller/movie.php');
 require('controller/user.php');
-require ('controller/admin.php');
+require('controller/admin.php');
 require('model/database.php');
 require('model/movie_model.php');
 require('model/user_model.php');
