@@ -46,6 +46,9 @@ switch ($action) {
     case 'user_logout':
         echo user_logout();
         break;
+    case 'user_bought':
+        echo user_bought();
+        break;
     case 'admin_login':
         echo admin_login();
         break;

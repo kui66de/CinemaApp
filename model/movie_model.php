@@ -99,3 +99,16 @@ function purchase_movie($user_id, $movie_id)
     $statement->execute();
     $statement->closeCursor();
 }
+
+function get_user_bought_movies($user_id)
+{
+    global $db;
+    $query = 'SELECT * FROM `user_movie_rlt` left join movies on movieID=movies.id
+              where userID = :user_id and is_deleted = 0';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':user_id', $user_id);
+    $statement->execute();
+    $movies = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $statement->closeCursor();
+    return $movies;
+}

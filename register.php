@@ -2,32 +2,13 @@
 <html lang="en">
 <?php include 'views/header.php'; ?>
 <body>
-<div class="navbar">
-    <div class="navbar-inner">
-        <div class="container">
-            <a href="#" class="brand">
-                <img src="images/logo.png" width="120" height="40" alt="Logo"/>
-                <!-- This is website logo -->
-            </a>
-            <!-- Navigation button, visible on small resolution -->
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <i class="icon-menu"></i>
-            </button>
-            <!-- Main navigation -->
-            <div class="nav-collapse collapse pull-right">
-                <ul class="nav" id="top-navigation">
-                    <li class="active"><a href="/">Home</a></li>
-                </ul>
-            </div>
-            <!-- End main navigation -->
-        </div>
-    </div>
-</div>
+
+<?php include 'views/nav.php'; ?>
 
 <div id="price" class="section secondary-section">
     <div class="container">
         <div class="title">
-            <h1>Cinema App Admin</h1>
+            <h1>Cinema App Register</h1>
         </div>
     </div>
 </div>
@@ -38,16 +19,24 @@
         <div>
             <form >
                 <div class="centered">
-                    <input type="text" name="email" id="username" style="margin: 0 auto;"
-                           placeholder="Enter your account" required/>
+                    <input type="text" name="username" id="username" style="margin: 0 auto;"
+                           placeholder="Enter your username" required/>
                 </div>
                 <div class="centered">
                     <input type="password" name="email" id="password"
                            placeholder="Enter your password" required/>
                 </div>
+                <div class="centered">
+                    <input type="password" name="email" id="password_confirm"
+                           placeholder="Enter your password" required/>
+                </div>
+                <div class="centered">
+                    <input type="text" name="nickname" id="nickname" style="margin: 0 auto;"
+                           placeholder="Enter your nickname" required/>
+                </div>
             </form>
             <div class="centered">
-            <a href="##" onclick="login()" class="button" style="background: white;color: #000;">LOGIN</a>
+            <a href="##" onclick="reg()" class="button" style="background: white;color: #000;">REGISTER</a>
             </div>
         </div>
     </div>
@@ -66,26 +55,29 @@
 </div>
 <?php include 'views/javaScript.php' ?>
 <script>
-    var host = 'http://localhost:63342/CinemaApp'
 
-    function login() {
+    function reg() {
         var username = $('#username').val()
         var password = $('#password').val()
+        var password_confirm = $('#password_confirm').val()
+        var nickname = $('#nickname').val()
         $.ajax({
             type: "post",
-            url: "yang.php?action=admin_login",
-            data: {"adminname": username, "password": password},
+            url: "yang.php?action=user_register",
+            data: {"username": username, "password": password,
+            "password_confirm": password_confirm,
+            "nickname": nickname},
             cache: false,
             async: false,
             dataType: "json",
             success: function (data) {
                 if (0 === data.code) {
-                    alert("login success！");
-                    window.location.href="admin_board.php"
+                    alert("register success！");
+                    window.location.href="login.php"
                 } else {
                     alert( data.info.message);
                 }
-                $('#loginModal').modal('hide')
+//                $('#loginModal').modal('hide')
             },
             error: function () {
                 alert("server error");

@@ -1,4 +1,15 @@
 <?php
+function user_bought()
+{
+    session_start();
+    $user_id = $_SESSION['user_id'];
+    if (empty($user_id)){
+        return error_json('you are not Login yet');
+    }
+    $movies = get_user_bought_movies($user_id);
+    return success_json($movies);
+}
+
 function user_login()
 {
     $user_name = $_POST['username'];
@@ -16,16 +27,20 @@ function user_login()
     # 写入session信息（user_name=>user_id）,前端需要存储用户名
     session_start();
     $_SESSION[$user_name] = $user['userID'];
+    $_SESSION['username'] = $user_name;
+    $_SESSION['user_id'] = $user['userID'];
     return success_json('landing successfully');
 }
 
 function user_logout()
 {
-    $user_name = $_POST['username'];
+//    $user_name = $_POST['username'];
     # 清除session信息
     session_start();
-    if (isset($_SESSION[$user_name])) {
-        unset($_SESSION[$user_name]);
+    if (isset($_SESSION['user_id'])) {
+//        unset($_SESSION[$user_name]);
+        unset($_SESSION['user_id']);
+        unset($_SESSION['username']);
     }
     return success_json('log out successfully');
 }

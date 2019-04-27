@@ -16,16 +16,20 @@ function admin_login()
     # 写入session信息（admin_name=>admin_id）,前端需要存储用户名
     session_start();
     $_SESSION[$admin_name] = $admin['adminID'];
+    $_SESSION['adminname'] = $admin_name;
+    $_SESSION['admin_id'] = $admin['adminID'];
     return success_json('landing successfully');
 }
 
 function admin_logout()
 {
-    $admin_name = $_POST['adminname'];
+//    $admin_name = $_POST['adminname'];
     # 清除session信息
     session_start();
-    if (isset($_SESSION[$admin_name])) {
-        unset($_SESSION[$admin_name]);
+    if (isset($_SESSION['admin_id'])) {
+//        unset($_SESSION[$user_name]);
+        unset($_SESSION['admin_id']);
+        unset($_SESSION['adminname']);
     }
     return success_json('log out successfully');
 }
