@@ -256,8 +256,10 @@ if(!isset($_SESSION['admin_id'])){
         $('#runtime2').val(movies[movid_id].runtime)
         $('#year2').val(movies[movid_id].year)
         $('#price2').val(movies[movid_id].price)
+
+        window.scrollTo(0,document.body.scrollHeight);
     }
-    var to_update={};
+
     function update_movie() {
         var id = $('#id2').val()
         var title = $('#title2').val()
