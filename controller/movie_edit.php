@@ -1,8 +1,14 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+include "../model/database.php";
+
+
+function edit_movie($id){
+    $id = $_POST['id'];
+    $msg = "success";
+    return json_encode($msg);
+}
+
+
 

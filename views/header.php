@@ -23,4 +23,9 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72.png">
         <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
         <link rel="shortcut icon" href="images/ico/favicon.ico">
+        <style>
+            .table{
+                border-radius: 5px;
+            }
+        </style>
     </head>

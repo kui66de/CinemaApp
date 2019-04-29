@@ -27,66 +27,15 @@
                 </div>
             </div>
         </div>
-        <!-- Start home section -->
-        <div id="home">
-            <!-- Start cSlider -->
-            <div id="da-slider" class="da-slider">
-                <div class="triangle"></div>
-                <!-- mask elemet use for masking background image -->
-                <div class="mask"></div>
-                <!-- All slides centred in container element -->
-                <div class="container">
-                    <!-- Start first slide -->
-                    <div class="da-slide">
-                        <h2 class="fittext2">Welcome to pluton theme</h2>
-                        <h4>Clean & responsive</h4>
-                        <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
-                        <a href="#" class="da-link button">Read more</a>
-                        <div class="da-img">
-                            <img src="images/Slider01.png" alt="image01" width="320">
-                        </div>
-                    </div>
-                    <!-- End first slide -->
-                    <!-- Start second slide -->
-                    <div class="da-slide">
-                        <h2>Easy management</h2>
-                        <h4>Easy to use</h4>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                        <a href="#" class="da-link button">Read more</a>
-                        <div class="da-img">
-                            <img src="images/Slider02.png" width="320" alt="image02">
-                        </div>
-                    </div>
-                    <!-- End second slide -->
-                    <!-- Start third slide -->
-                    <div class="da-slide">
-                        <h2>Revolution</h2>
-                        <h4>Customizable</h4>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        <a href="#" class="da-link button">Read more</a>
-                        <div class="da-img">
-                            <img src="images/Slider03.png" width="320" alt="image03">
-                        </div>
-                    </div>
-                    <!-- Start third slide -->
-                    <!-- Start cSlide navigation arrows -->
-                    <div class="da-arrows">
-                        <span class="da-arrows-prev"></span>
-                        <span class="da-arrows-next"></span>
-                    </div>
-                    <!-- End cSlide navigation arrows -->
-                </div>
-            </div>
-        </div>
-        <!-- End home section -->
+
         <!-- Service section start -->
         <div class="section primary-section" id="service">
             <div class="container">
                 <!-- Start title section -->
                 <div class="title">
-                    <h1>What We Do?</h1>
+                    <h1>What We Have?</h1>
                     <!-- Section's title goes here -->
-                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+                    <p>Millions of movies, you'll like it.</p>
                     <!--Simple description for section goes here. -->
                 </div>
                 <div class="row-fluid">
@@ -95,8 +44,8 @@
                             <div class="circle-border zoom-in">
                                 <img class="img-circle" src="images/Service1.png" alt="service 1">
                             </div>
-                            <h3>Modern Design</h3>
-                            <p>We Create Modern And Clean Theme For Your Business Company.</p>
+                            <h3>Modern Seat</h3>
+                            <p>So comfortable.</p>
                         </div>
                     </div>
                     <div class="span4">
@@ -104,8 +53,8 @@
                             <div class="circle-border zoom-in">
                                 <img class="img-circle" src="images/Service2.png" alt="service 2" />
                             </div>
-                            <h3>Powerfull Theme</h3>
-                            <p>We Create Modern And Powerful Theme With Lots Animation And Features</p>
+                            <h3>Powerfull Sound</h3>
+                            <p>good to watch movie</p>
                         </div>
                     </div>
                     <div class="span4">
@@ -113,8 +62,8 @@
                             <div class="circle-border zoom-in">
                                 <img class="img-circle" src="images/Service3.png" alt="service 3">
                             </div>
-                            <h3>Clean Code</h3>
-                            <p>We Create Modern And Powerful Html5 And CSS3 Code Easy For Read And Customize.</p>
+                            <h3>Clean Theater</h3>
+                            <p>We are clean.</p>
                         </div>
                     </div>
                 </div>
@@ -636,158 +585,6 @@
                 <a href="#" class="button">Purshase now</a>
             </div>
         </div>
-        <!-- Client section start -->
-        <!-- Client section start -->
-        <div id="clients">
-            <div class="section primary-section">
-                <div class="triangle"></div>
-                <div class="container">
-                    <div class="title">
-                        <h1>What Client Say?</h1>
-                        <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
-                    </div>
-                    <div class="row">
-                        <div class="span4">
-                            <div class="testimonial">
-                                <p>"I've worked too hard and too long to let anything stand in the way of my goals. I will not let my teammates down and I will not let myself down."</p>
-                                <div class="whopic">
-                                    <div class="arrow"></div>
-                                    <img src="images/Client1.png" class="centered" alt="client 1">
-                                    <strong>John Doe
-                                        <small>Client</small>
-                                    </strong>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="span4">
-                            <div class="testimonial">
-                                <p>"In motivating people, you've got to engage their minds and their hearts. I motivate people, I hope, by example - and perhaps by excitement, by having productive ideas to make others feel involved."</p>
-                                <div class="whopic">
-                                    <div class="arrow"></div>
-                                    <img src="images/Client2.png" class="centered" alt="client 2">
-                                    <strong>John Doe
-                                        <small>Client</small>
-                                    </strong>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="span4">
-                            <div class="testimonial">
-                                <p>"Determine never to be idle. No person will have occasion to complain of the want of time who never loses any. It is wonderful how much may be done if we are always doing."</p>
-                                <div class="whopic">
-                                    <div class="arrow"></div>
-                                    <img src="images/Client3.png" class="centered" alt="client 3">
-                                    <strong>John Doe
-                                        <small>Client</small>
-                                    </strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="testimonial-text">
-                        "Perfection is Achieved Not When There Is Nothing More to Add, But When There Is Nothing Left to Take Away"
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="section third-section">
-            <div class="container centered">
-                <div class="sub-section">
-                    <div class="title clearfix">
-                        <div class="pull-left">
-                            <h3>Our Clients</h3>
-                        </div>
-                        <ul class="client-nav pull-right">
-                            <li id="client-prev"></li>
-                            <li id="client-next"></li>
-                        </ul>
-                    </div>
-                    <ul class="row client-slider" id="clint-slider">
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo01.png" alt="client logo 1">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo02.png" alt="client logo 2">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo03.png" alt="client logo 3">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo04.png" alt="client logo 4">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo05.png" alt="client logo 5">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo02.png" alt="client logo 6">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo04.png" alt="client logo 7">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- Price section start -->
-        <div id="price" class="section secondary-section">
-            <div class="container">
-                <div class="title">
-                    <h1>Price</h1>
-                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
-                </div>
-                <div class="price-table row-fluid">
-                    <div class="span4 price-column">
-                        <h3>Basic</h3>
-                        <ul class="list">
-                            <li class="price">$19,99</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>24/7</strong> Support</li>
-                            <li><strong>5 GB</strong> File Storage</li>
-                        </ul>
-                        <a href="#" class="button button-ps">BUY</a>
-                    </div>
-                    <div class="span4 price-column">
-                        <h3>Pro</h3>
-                        <ul class="list">
-                            <li class="price">$39,99</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>24/7</strong> Support</li>
-                            <li><strong>25 GB</strong> File Storage</li>
-                        </ul>
-                        <a href="#" class="button button-ps">BUY</a>
-                    </div>
-                    <div class="span4 price-column">
-                        <h3>Premium</h3>
-                        <ul class="list">
-                            <li class="price">$79,99</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>24/7</strong> Support</li>
-                            <li><strong>50 GB</strong> File Storage</li>
-                        </ul>
-                        <a href="#" class="button button-ps">BUY</a>
-                    </div>
-                </div>
-                <div class="centered">
-                    <p class="price-text">We Offer Custom Plans. Contact Us For More Info.</p>
-                    <a href="#contact" class="button">Contact Us</a>
-                </div>
-            </div>
-        </div>
-        <!-- Price section end -->
         <!-- Newsletter section start -->
         <div class="section third-section">
             <div class="container newsletter">
