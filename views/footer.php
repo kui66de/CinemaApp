@@ -1,7 +1,7 @@
  <!-- Contact section edn -->
         <!-- Footer section start -->
         <div class="footer">
-            <p>&copy; 2013 Theme by <a href="http://www.graphberry.com">GraphBerry</a>, <a href="http://goo.gl/NM84K2">Documentation</a></p>
+            <p>Copyright &copy; Shikui Wang, Yang Zheng&nbsp; &nbsp;<?php echo date("Y"); ?></p>
         </div>
         <!-- Footer section end -->
         <!-- ScrollUp button start -->
