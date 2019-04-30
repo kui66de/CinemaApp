@@ -1,5 +1,4 @@
-![HappyCinema](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlAOuHlzctHqhdBvrvF1Jo31d4w6thzTqA6f1u9WnIo1NbEywr4g)#HappyCinema
-
+![HappyCinema]#HappyCinema(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlAOuHlzctHqhdBvrvF1Jo31d4w6thzTqA6f1u9WnIo1NbEywr4g)
 ## How to Config
 * create database named `cinemaapp`, then update `username` and `password` in 
 file `model/databases.php`
