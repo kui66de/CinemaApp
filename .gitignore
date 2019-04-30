@@ -66,4 +66,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# shell
+*.sh
+
 # End of https://www.gitignore.io/api/macos,windows,netbeans

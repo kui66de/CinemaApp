@@ -2,7 +2,7 @@
 
 require('controller/movie.php');
 require('controller/user.php');
-require ('controller/admin.php');
+require('controller/admin.php');
 require('model/database.php');
 require('model/movie_model.php');
 require('model/user_model.php');
@@ -45,6 +45,9 @@ switch ($action) {
         break;
     case 'user_logout':
         echo user_logout();
+        break;
+    case 'user_bought':
+        echo user_bought();
         break;
     case 'admin_login':
         echo admin_login();

@@ -17,8 +17,8 @@ function get_single_movie()
 # 新增电影
 function add_new_movie()
 {
-    $admin_name = $_POST['adminname'];
     session_start();
+    $admin_name = $_SESSION['adminname'];
     if (empty($admin_name) || empty($_SESSION[$admin_name])) {
         return error_json('please login with admin account');
     }
@@ -44,8 +44,8 @@ function add_new_movie()
 # 修改电影信息
 function modify_movie()
 {
-    $admin_name = $_POST['adminname'];
     session_start();
+    $admin_name = $_SESSION['adminname'];
     if (empty($admin_name) || empty($_SESSION[$admin_name])) {
         return error_json('please login with admin account');
     }
@@ -79,8 +79,8 @@ function modify_movie()
 // 删除电影信息
 function del_movie()
 {
-    $admin_name = $_POST['adminname'];
     session_start();
+    $admin_name = $_SESSION['adminname'];
     if (empty($admin_name) || empty($_SESSION[$admin_name])) {
         return error_json('please login with admin account');
     }
