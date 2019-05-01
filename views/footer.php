@@ -1,10 +1,10 @@
 <footer>
     <p class="copyright">
         &copy; <?php
-            echo "2013 Theme by";
+            echo "2019 copyright by";
         ?>
-        <a href="http://www.graphberry.com">GraphBerry</a>,
-        <a href="http://goo.gl/NM84K2">Documentation</a></p>
+        <a>Shikui Wang</a>,
+        <a>Yang Zheng</a></p>
     </p>
 </footer>
 </body>

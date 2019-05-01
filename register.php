@@ -37,6 +37,7 @@
             </form>
             <div class="centered">
             <a href="##" onclick="reg()" class="button" style="background: white;color: #000;">REGISTER</a>
+            <p>Already have an account? <a href="login.php">Login here</a>.</p>
             </div>
         </div>
     </div>

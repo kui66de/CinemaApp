@@ -16,7 +16,7 @@
             <!-- Main navigation -->
             <div class="nav-collapse collapse pull-right">
                 <ul class="nav" id="top-navigation">
-                    <li class="active"><a href="/">Home</a></li>
+                    <li class="active"><a href="index.php">Home</a></li>
                 </ul>
             </div>
             <!-- End main navigation -->
